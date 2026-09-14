@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-interface="terminal">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -132,6 +132,14 @@
         <a href="#credentials">Credentials</a>
       </div>
       <div class="nav-actions">
+        <label class="interface-picker">
+          <span class="sr-only">Choose website interface</span>
+          <i aria-hidden="true">UI:</i>
+          <select class="interface-select" aria-label="Choose website interface">
+            <option value="terminal">Terminal OS</option>
+            <option value="systems">Systems Lab</option>
+          </select>
+        </label>
         <button class="terminal-trigger" type="button"><span>⌁</span> Terminal <kbd>`</kbd></button>
         <button class="command-trigger" type="button" aria-label="Open command palette"><span>&gt;_</span> Command <kbd>/</kbd></button>
         <button class="icon-button theme-toggle" type="button" aria-label="Change color theme">

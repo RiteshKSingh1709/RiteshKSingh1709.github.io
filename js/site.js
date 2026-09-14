@@ -16,9 +16,18 @@ const terminalForm = document.querySelector(".terminal-form");
 const terminalInput = document.querySelector("#terminal-input");
 const terminalOutput = document.querySelector(".terminal-output");
 const terminalBody = document.querySelector(".terminal-body");
+const interfaceSelect = document.querySelector(".interface-select");
 const storedTheme = localStorage.getItem("portfolio-theme");
+const storedInterface = localStorage.getItem("portfolio-interface");
 
 root.dataset.theme = storedTheme || "dark";
+root.dataset.interface = storedInterface || "terminal";
+interfaceSelect.value = root.dataset.interface;
+
+interfaceSelect.addEventListener("change", () => {
+  root.dataset.interface = interfaceSelect.value;
+  localStorage.setItem("portfolio-interface", interfaceSelect.value);
+});
 
 setTimeout(() => bootScreen.classList.add("complete"), 900);
 
