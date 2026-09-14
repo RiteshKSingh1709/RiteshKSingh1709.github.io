@@ -125,11 +125,11 @@
         <span class="sr-only">Toggle navigation</span>
       </button>
       <div class="nav-menu" id="nav-menu">
-        <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
-        <a href="#credentials">Credentials</a>
+        <a href="#profile" data-file="profile.md">Profile</a>
+        <a href="#experience" data-file="experience.log">Experience</a>
+        <a href="#expertise" data-file="skills.yaml">Expertise</a>
+        <a href="#projects" data-file="projects.json">Projects</a>
+        <a href="#credentials" data-file="credentials.json">Credentials</a>
       </div>
       <div class="nav-actions">
         <label class="interface-picker">
@@ -149,6 +149,13 @@
       </div>
     </nav>
   </header>
+  <div class="editor-tabs" aria-hidden="true">
+    <span class="active"><i>●</i> README.md</span>
+    <span><i>{ }</i> career.json</span>
+    <span><i>≡</i> architecture.yaml</span>
+    <span class="editor-spacer"></span>
+    <small>main* · UTF-8</small>
+  </div>
 
   <main id="content">
     <section class="hero shell" id="home">
@@ -160,6 +167,12 @@
           <div class="hero-actions">
             <a class="primary-action" href="#experience">Enter the system <span>↓</span></a>
             <a class="text-action" href="mailto:ritesh.kumar465@gmail.com">ritesh.kumar465@gmail.com <span>↗</span></a>
+          </div>
+          <div class="terminal-shortcuts" aria-label="Quick terminal commands">
+            <span>quick_commands:</span>
+            <button type="button" data-terminal-command="whoami">whoami</button>
+            <button type="button" data-terminal-command="experience">git log</button>
+            <button type="button" data-terminal-command="skills">cat skills</button>
           </div>
         </div>
 
@@ -476,5 +489,21 @@
     <p class="made-with-love">Made with <span class="heart" aria-label="love">♥</span> by <strong>Ritesh</strong> <span class="code-cursor" aria-hidden="true">_</span></p>
     <a href="#home">Back to top ↑</a>
   </footer>
+  <div class="ide-statusbar" aria-hidden="true">
+    <span>⑂ master*</span>
+    <span>✓ 0 errors</span>
+    <span>Azure: connected</span>
+    <span class="status-spacer"></span>
+    <span>Spaces: 2</span>
+    <span>UTF-8</span>
+    <span>{ } JavaScript</span>
+    <span>Ln 10+, Col ∞</span>
+  </div>
+  <nav class="mobile-command-dock" aria-label="Mobile quick navigation">
+    <a href="#home"><span>⌂</span>home</a>
+    <a href="#experience"><span>⑂</span>career</a>
+    <button type="button" data-terminal-command="help"><span>&gt;_</span>terminal</button>
+    <a href="#projects"><span>{ }</span>work</a>
+  </nav>
 </body>
 </html>

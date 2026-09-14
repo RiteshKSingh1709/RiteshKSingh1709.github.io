@@ -229,6 +229,16 @@ terminalInput.addEventListener("keydown", (event) => {
   }
 });
 
+document.querySelectorAll("[data-terminal-command]").forEach((button) => {
+  button.addEventListener("click", () => {
+    openTerminal();
+    setTimeout(() => {
+      runTerminalCommand(button.dataset.terminalCommand);
+      terminalInput.focus();
+    }, 80);
+  });
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "`" && terminalMode.hidden && commandPalette.hidden && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
     event.preventDefault();
